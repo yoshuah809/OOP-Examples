@@ -3,7 +3,7 @@ public abstract class Computer
 
     protected string _name = "Unknown";
     public bool isOn { get; private set; }
-    public string name { get 
+    public virtual string name { get 
         {
         return _name;
         }
@@ -26,7 +26,7 @@ public abstract class Computer
         isOn=false;
     }
 
-    public void TogglePower()
+    public virtual void TogglePower()
     {
         if (isOn) { TurnOff(); } else { TurnOn(); }
     }
