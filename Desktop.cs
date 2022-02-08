@@ -1,4 +1,4 @@
-class Desktop : Computer { 
+class Desktop : Computer, ISleep { 
     
     
     public enum CaseType
@@ -20,7 +20,7 @@ class Desktop : Computer {
         
     }
 
-    public void ToggleSleept()
+    public void ToggleSleep()
     {
         if (!isOn) { return; }
         isSleeping = !isSleeping;
