@@ -2,8 +2,11 @@
 
 
 var comp = new Computer("Generic Computer");
-//comp.name = "Generic Computer";
+comp.TogglePower();
 
 
 
 System.Console.WriteLine("Computer Name is: " + comp.name);
+System.Console.WriteLine("Computer  is On: " + comp.isOn);
+comp.TogglePower();
+System.Console.WriteLine("Computer  is On: " + comp.isOn);
