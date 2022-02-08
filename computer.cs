@@ -1,4 +1,4 @@
-public class Computer
+public abstract class Computer
 { 
 
     protected string _name = "Unknown";
