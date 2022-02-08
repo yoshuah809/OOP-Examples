@@ -1,8 +1,9 @@
-public abstract class Computer
-{ 
+ abstract class Computer : IPowerOn
+{
 
+    protected IPowerOn powerController;
     protected string _name = "Unknown";
-    public bool isOn { get; private set; }
+    public bool isOn { get { return powerController.isOn; } }
     public virtual string name { get 
         {
         return _name;
@@ -15,20 +16,14 @@ public abstract class Computer
     public Computer(string name)
     {
         this.name = name;
+        powerController = new PowerController();
     }
 
-    protected void TurnOn()
-    {
-        isOn=true;
-    }
-    protected void TurnOff()
-    {
-        isOn=false;
-    }
+
 
     public virtual void TogglePower()
     {
-        if (isOn) { TurnOff(); } else { TurnOn(); }
+       powerController.TogglePower();
     }
     
 
