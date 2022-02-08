@@ -1,8 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
-//var comp = new Desktop("Generic Computer", Desktop.CaseType.Tower);
-var comp = new Laptop("Generic Computer", 1024, 768);
+var comp = new Desktop("Generic Computer", Desktop.CaseType.Tower);
+//var comp = new Laptop("Generic Computer", 1024, 768);
 
 
 

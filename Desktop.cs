@@ -1,6 +1,6 @@
 class Desktop : Computer, ISleep { 
     
-    
+    private ISleep sleepController;
     public enum CaseType
     {   
         Tower,
@@ -8,7 +8,11 @@ class Desktop : Computer, ISleep {
 
     }
     public CaseType caseType { get; private set; }
-    public bool isSleeping { get; private set; }
+    public bool isSleeping { get 
+        {
+            return sleepController.isSleeping;
+        } 
+    }
     public override string name { get
         {
             return base.name + " " + caseType;
@@ -17,13 +21,14 @@ class Desktop : Computer, ISleep {
     public Desktop (string name, CaseType caseType): base(name) 
     {
         this.caseType = caseType;
+        sleepController = new SleepController();
         
     }
 
     public void ToggleSleep()
     {
         if (!isOn) { return; }
-        isSleeping = !isSleeping;
+        sleepController.ToggleSleep();
     }
     public override void TogglePower()
     {
