@@ -32,10 +32,23 @@ if(sleeppingComp != null)
 
 */
 
-class Program
+namespace OOPExamples
 {
-    static void Main(string[] args)
+    
+    class Program
     {
-        Console.WriteLine("Hello World!");
+        static void Main(string[] args)
+        {
+            var account = new BankAccount("Josue", 10000);
+            Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance}");
+
+
+        }
+
+    
+
     }
+
 }
+
+
